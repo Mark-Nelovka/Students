@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navigation from "../Navigations/Navigation";
 import Filter from "../Filter/Filter";
 import Headline from "../Headline/Headline";
@@ -17,7 +17,8 @@ function App () {
 
       <Suspense fallback={<h1>Loading...</h1>}>
       <Routes>
-        <Route path="/" element={<Students />} />
+          <Route path="/" element={<Navigate to='/students' />} />
+          <Route path="/students" element={<Students />} />
         </Routes>
       </Suspense>
       <Pagination />

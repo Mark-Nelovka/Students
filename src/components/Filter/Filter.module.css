@@ -1,7 +1,96 @@
 @import '../../sass/Filter.scss';
 
-.containerFilter {
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
   height: 40px;
-  background-color: var(--dark-color);
-  font-size: 18px;
+  background-color: var(--pagination-color);
+  margin: 0 0;
+  padding-left: 0;
+}
+
+.containerFilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
+  height: 40px;
+  margin: 0 0;
+  padding-left: 0;
+}
+
+.filterItem {
+  display: flex;
+  align-items: center;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: var(--font-weight);
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--filter-color);
+}
+
+.filterItem:not(:last-child) {
+  margin-right: 42px;
+}
+
+.buttonFilter {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: var(--font-weight);
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--filter-color);
+  border: none;
+  background-color: inherit;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0;
+  cursor: pointer;
+}
+
+.buttonFilter:not(:last-child) {
+  margin-right: 42px;
+}
+
+.arrow {
+  fill: inherit;
+  margin-left: 10px;
+}
+
+.containerClearButton {
+  display: flex;
+  align-items: center;
+  margin-left: 33px;
+  height: 40px;
+}
+
+.clearButton {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--filter-color);
+  background-color: inherit;
+  border: none;
+  padding: 0 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.clearSvgButton {
+  fill: inherit;
+  margin-right: 9px;
 }

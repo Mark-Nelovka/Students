@@ -1,55 +1,62 @@
-// import s from './navigation.module.css';
+import s from './Navigation.module.css';
 import { NavLink } from 'react-router-dom';
-
 function Navigation() {
   return (
-    <header>
-      <nav>
-        <NavLink
-          to="/"
-          // className={({ isActive }) => `${isActive ? s.active : s.link}`}
-        >
+    <header className={s.header}>
+      <nav className={s.nav}>
+        <NavLink to="/" className={s.link}>
           SCHOOL 1
         </NavLink>
-
-        <NavLink
-          to="#"
-          // className={({ isActive }) => `${isActive ? s.active : s.link}`}
-        >
-          ANALYTICS
-        </NavLink>
-        <NavLink
-          to="/"
-          // className={({ isActive }) => `${isActive ? s.active : s.link}`}
-        >
-          GRADEBOOKS
-        </NavLink>
-
-        <NavLink
-          to="/"
-          // className={({ isActive }) => `${isActive ? s.active : s.link}`}
-        >
-          TESTS
-        </NavLink>
-        <NavLink
-          to="/"
-          // className={({ isActive }) => `${isActive ? s.active : s.link}`}
-        >
-          STUDENTS
-        </NavLink>
-
-        <NavLink
-          to="/"
-          // className={({ isActive }) => `${isActive ? s.active : s.link}`}
-        >
-          TEACHERS
-        </NavLink>
-        <NavLink
-          to="/"
-          // className={({ isActive }) => `${isActive ? s.active : s.link}`}
-        >
-          ARCHIVE
-        </NavLink>
+        <ul className={s.listMenu}>
+          <li className={s.item}>
+            <NavLink
+              to="/"
+              className={({ isActive }) => `${isActive ? s.active : s.link}`}
+            >
+              ANALYTICS
+            </NavLink>
+          </li>
+          <li className={s.item}>
+            <NavLink
+              to="/"
+              className={({ isActive }) => `${isActive ? s.active : s.link}`}
+            >
+              GRADEBOOKS
+            </NavLink>
+          </li>
+          <li className={s.item}>
+            <NavLink
+              to="/"
+              className={({ isActive }) => `${isActive ? s.active : s.link}`}
+            >
+              TESTS
+            </NavLink>
+          </li>
+          <li className={s.item}>
+            <NavLink
+              to="/students"
+              className={({ isActive }) => `${isActive ? s.active : s.link}`}
+            >
+              STUDENTS
+            </NavLink>
+          </li>
+          <li className={s.item}>
+            <NavLink
+              to="/"
+              className={({ isActive }) => `${isActive ? s.active : s.link}`}
+            >
+              TEACHERS
+            </NavLink>
+          </li>
+          <li className={s.item}>
+            <NavLink
+              to="/"
+              className={({ isActive }) => `${isActive ? s.active : s.link}`}
+            >
+              ARCHIVE
+            </NavLink>
+          </li>
+        </ul>
       </nav>
     </header>
   );

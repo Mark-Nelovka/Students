@@ -1,0 +1,59 @@
+@import '../../sass/Filter.scss';
+
+.header {
+  padding: 14px 47px 14px 0px;
+}
+
+.nav {
+  margin-left: 233px;
+  display: flex;
+  align-items: center;
+}
+
+.nav > a {
+  margin-right: 94px;
+}
+
+.listMenu {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0 0;
+  padding-left: 0;
+}
+
+/* .listMenu .item:not(:last-child) {
+  margin-right: 40px;
+} */
+
+.item {
+  padding: 6px 12px;
+}
+
+.link {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--menu-color);
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+.active {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--menu-color);
+  text-decoration: none;
+  padding: 6px 12px;
+  background-color: var(--active-menu-color);
+  color: #ffffff;
+  margin-right: 28px;
+}

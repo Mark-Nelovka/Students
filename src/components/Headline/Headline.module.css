@@ -1,0 +1,78 @@
+@import '../../sass/Filter.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 173px 6px 40px;
+}
+
+.tableName {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--pagination-color);
+}
+
+.containerInput {
+  position: relative;
+}
+
+.inputSearchStudent {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: 140%;
+  color: var(--filter-color);
+  width: 499px;
+  background: #f2f2f2;
+  padding: 6px 14px 6px 12px;
+  border: none;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  right: 15px;
+  fill: inherit;
+  width: 12px;
+  height: 12px;
+}
+
+.containerDownload {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--filter-color);
+  display: flex;
+  align-items: center;
+}
+
+.export {
+  fill: inherit;
+  width: 9px;
+  height: 11px;
+  margin-right: 9px;
+}
+
+.searchButton {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  right: 15px;
+  fill: inherit;
+  /* width: 12px;
+  height: 12px; */
+  width: auto;
+  height: auto;
+  background-color: inherit;
+  border: none;
+}
