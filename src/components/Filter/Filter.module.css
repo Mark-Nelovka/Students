@@ -1,0 +1,7 @@
+@import '../../sass/Filter.scss';
+
+.containerFilter {
+  height: 40px;
+  background-color: var(--dark-color);
+  font-size: 18px;
+}
