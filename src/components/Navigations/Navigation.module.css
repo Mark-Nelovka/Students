@@ -23,13 +23,9 @@
   padding-left: 0;
 }
 
-/* .listMenu .item:not(:last-child) {
-  margin-right: 40px;
-} */
-
-.item {
+/* .item {
   padding: 6px 12px;
-}
+} */
 
 .link {
   font-family: 'Rubik';

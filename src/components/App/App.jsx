@@ -1,19 +1,22 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
 import Navigation from "../Navigations/Navigation";
 import Filter from "../Filter/Filter";
 import Headline from "../Headline/Headline";
 import Pagination from "../Pagination/Pagination";
+import HeadArchive from "components/HeadlineArchive/HeadArchive";
 const Students = lazy(() => import('../Students/Students' /* webpackChunkName: "Students" */));
 
 
-function App () {
+function App() {
+  const count = useSelector(state => state.students.archive)
   
   return (
     <>
       <Navigation />
       <Filter />
-      <Headline />
+      {count ? <HeadArchive /> : <Headline />}
 
       <Suspense fallback={<h1>Loading...</h1>}>
       <Routes>

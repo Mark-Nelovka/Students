@@ -47,7 +47,7 @@
 .containerFilterSpeed {
   display: flex;
   align-items: center;
-  margin-right: 24px;
+  margin-right: 29px;
 }
 
 .containerFilterId {
@@ -161,7 +161,7 @@
   color: var(--text-color);
   display: inline-block;
   width: 112px;
-  margin-right: 25px;
+  margin-right: 29px;
 }
 
 .containerParentName {
@@ -176,6 +176,17 @@
   margin-right: 111px;
   display: flex;
   align-items: center;
+}
+
+.studentParentName {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: 140%;
+  color: var(--text-color);
+  display: inline-block;
+  width: 250px;
 }
 
 /* ICONS  */
@@ -197,4 +208,9 @@
   height: 13px;
   fill: inherit;
   margin-right: 7px;
+}
+
+.check {
+  fill: #323232;
+  background-color: inherit;
 }

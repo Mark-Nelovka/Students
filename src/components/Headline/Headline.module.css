@@ -57,7 +57,7 @@
 }
 
 .export {
-  fill: inherit;
+  fill: var(--filter-color);
   width: 9px;
   height: 11px;
   margin-right: 9px;

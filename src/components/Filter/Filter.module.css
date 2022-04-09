@@ -91,6 +91,6 @@
 }
 
 .clearSvgButton {
-  fill: inherit;
+  fill: var(--filter-color);
   margin-right: 9px;
 }

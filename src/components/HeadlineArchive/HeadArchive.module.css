@@ -1,0 +1,81 @@
+@import '../../sass/Filter.scss';
+
+.sectionArchive {
+  display: flex;
+  align-items: center;
+  background: var(--filter-color);
+  padding: 14px 40px;
+}
+
+.studentSecelcted {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-right: 731px;
+}
+
+.clearSelected {
+  fill: #ffffff;
+  margin-right: 9px;
+}
+
+.exportIcon {
+  fill: #ffffff;
+  margin-right: 9px;
+}
+
+.archiveIcon {
+  fill: #424242;
+  margin-right: 8px;
+}
+
+.containerCancelSelection > button {
+  display: flex;
+  align-items: center;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-right: 19px;
+}
+
+.buttonClear {
+  border: none;
+  background-color: inherit;
+  width: auto;
+  height: auto;
+  padding: 0 0;
+  cursor: pointer;
+}
+
+.containerExport {
+  display: flex;
+  align-items: center;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-right: 18px;
+}
+
+.containerArchive {
+  display: flex;
+  align-items: center;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #424242;
+}
