@@ -45,6 +45,11 @@
 }
 
 .containerDownload {
+  display: flex;
+  align-items: center;
+}
+
+.export {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
@@ -54,9 +59,10 @@
   color: var(--filter-color);
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
-.export {
+.exportIcon {
   fill: var(--filter-color);
   width: 9px;
   height: 11px;
@@ -65,12 +71,12 @@
 
 .searchButton {
   position: absolute;
-  top: 10px;
-  bottom: 10px;
+  top: 10;
+  bottom: 10;
   right: 15px;
   fill: inherit;
-  /* width: 12px;
-  height: 12px; */
+  width: 12px;
+  height: 12px;
   width: auto;
   height: auto;
   background-color: inherit;

@@ -10,7 +10,7 @@ const fetchStudent = createAsyncThunk(
   async (_, thunkApi) => {
     try {
       const { data } = await axios.get(`?${PARAMS}`);
-      return data.data;
+      return data;
     } catch (error) {
       console.log(error);
       // if (error.message === 'Request failed with status code 400') {
@@ -22,10 +22,73 @@ const fetchStudent = createAsyncThunk(
   }
 );
 
+const pageIncrement = createAsyncThunk(
+  'students/pageIncrement',
+  async (page, thunkApi) => {
+    try {
+      const { data } = await axios.get(`?page=${page}&size=10`);
+      if (data.data.length == 0) {
+        return thunkApi.rejectWithValue();
+      }
+      return data.data;
+    } catch (error) {
+      console.log(error);
+      return thunkApi.rejectWithValue();
+    }
+  }
+);
+
+const pageDecrement = createAsyncThunk(
+  'students/pageDecrement',
+  async (page, thunkApi) => {
+    try {
+      const { data } = await axios.get(`?page=${page}&size=10`);
+      if (data.data.length == 0) {
+        return thunkApi.rejectWithValue();
+      }
+      return data.data;
+    } catch (error) {
+      console.log(error);
+      return thunkApi.rejectWithValue();
+    }
+  }
+);
+
+const searchStudent = createAsyncThunk(
+  'students/search',
+  async (info, thunkApi) => {
+    try {
+      const { data } = await axios.get(`?page=1&size=10&search=${info}`);
+      console.log(data);
+      if (data.data.length == 0) {
+        return thunkApi.rejectWithValue();
+      }
+      return data.data;
+    } catch (error) {
+      console.log(error);
+      return thunkApi.rejectWithValue();
+    }
+  }
+);
+
 const check = createAction('students/checked');
 
 const countArchiveStudents = createAction('students/archive');
 
 const clearAllStudents = createAction('students/clearAllSelected');
 
-export { fetchStudent, check, countArchiveStudents, clearAllStudents };
+const filter = createAction('students/filter');
+
+const filterArr = createAction('students/filterArr');
+
+export {
+  fetchStudent,
+  check,
+  countArchiveStudents,
+  clearAllStudents,
+  pageIncrement,
+  pageDecrement,
+  filter,
+  filterArr,
+  searchStudent,
+};

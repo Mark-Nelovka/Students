@@ -43,3 +43,25 @@
   line-height: 140%;
   color: var(--pagination-color);
 }
+
+.buttonRight {
+  border: none;
+  background-color: inherit;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  padding: 0 0;
+}
+
+.buttonLeft {
+  border: none;
+  background-color: inherit;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  padding: 0 0;
+}
+
+.containerButtonPargination {
+  display: flex;
+}
