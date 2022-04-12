@@ -2,6 +2,8 @@
 
 .header {
   padding: 14px 47px 14px 0px;
+  display: flex;
+  align-items: center;
 }
 
 .nav {
@@ -44,4 +46,14 @@
   background-color: $active-menu-color;
   color: #ffffff;
   margin-right: 28px;
+}
+
+.container-user {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.user_foto {
+  margin-right: 11px;
 }

@@ -1,6 +1,7 @@
 import '../../css/Archive.css';
 import { ReactComponent as ArrowDown } from '../images/arrow-down.svg';
 import { ReactComponent as Info } from '../images/info.svg';
+import { ReactComponent as DeleteArchive } from '../images/delete-archive.svg';
 function Archive({ archive }) {
   return (
     <>
@@ -11,7 +12,6 @@ function Archive({ archive }) {
           return (
             <li key={student.id} className="archive_list">
               <input className="archive_checkbox" type="checkbox" />
-
               <span className="archive_name">{student.name}</span>
               <span className="archive_id">{student.id}</span>
               <span className="archive_class">{student.class}</span>
@@ -23,6 +23,10 @@ function Archive({ archive }) {
                   {student.parents.join(', ')}
                 </span>
               </div>
+              <button className="archive_delete-button">
+                <DeleteArchive width="12" height="12" />
+              </button>
+
               <ArrowDown
                 className="arhive_arrow-down-icon"
                 width="10"

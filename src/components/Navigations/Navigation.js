@@ -1,4 +1,6 @@
 import '../../css/Navigation.css';
+import foto from '../images/stud-foto.png';
+import { ReactComponent as ArrowDown } from '../images/arrow-down.svg';
 import { NavLink } from 'react-router-dom';
 function Navigation() {
   return (
@@ -58,6 +60,16 @@ function Navigation() {
           </li>
         </ul>
       </nav>
+      <div className="container-user">
+        <img
+          className="user_foto"
+          src={foto}
+          alt="foto"
+          width="32"
+          height="32"
+        />
+        <ArrowDown width="10" height="5" />
+      </div>
     </header>
   );
 }

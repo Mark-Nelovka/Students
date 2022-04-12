@@ -6,6 +6,8 @@ import { ReactComponent as FilterName } from '../images/filter-name.svg';
 import { ReactComponent as ArrowNumber } from '../images/arrows-number.svg';
 import { ReactComponent as Info } from '../images/info.svg';
 import { ReactComponent as ArrowDown } from '../images/arrow-down.svg';
+import { ReactComponent as Progres } from '../images/progres.svg';
+import { ReactComponent as Change } from '../images/change-info.svg';
 import {
   fetchStudent,
   countArchiveStudents,
@@ -74,6 +76,7 @@ function Students() {
         </div>
 
         <span className="students_parent-name">Parents</span>
+        {archive.length > 0 && <span className="action">Actions</span>}
       </div>
 
       <ul className="students_list">
@@ -83,7 +86,14 @@ function Students() {
               return <ModalInfoStudent props={idModal} />;
             }
             return (
-              <li key={student.id} className="students_item">
+              <li
+                key={student.id}
+                className={
+                  archive.length > 0 && count !== 0
+                    ? 'students_item-archive'
+                    : 'students_item'
+                }
+              >
                 <input
                   type="checkbox"
                   onChange={e => {
@@ -112,18 +122,37 @@ function Students() {
                     {student.parents.join(', ')}
                   </span>
                 </div>
-                <ArrowDown
-                  className="students_arrow-down-icon"
-                  width="10"
-                  height="5"
-                  onClick={moreInfo}
-                  id={student.id}
-                />
+                {archive.length > 0 && count !== 0 ? (
+                  <div className="students_container-info">
+                    <button className="students_info-change">
+                      <Change width="12" height="12" />
+                    </button>
+                    <button className="students_info-progres">
+                      <Progres width="13" height="8" />
+                    </button>
+
+                    <ArrowDown
+                      className="students_arrow-down-icon"
+                      width="10"
+                      height="5"
+                      onClick={moreInfo}
+                      id={student.id}
+                    />
+                  </div>
+                ) : (
+                  <ArrowDown
+                    className="students_arrow-down-icon"
+                    width="10"
+                    height="5"
+                    onClick={moreInfo}
+                    id={student.id}
+                  />
+                )}
               </li>
             );
           })}
       </ul>
-      {archive.length > 0 && <Archive archive={archive} />}
+      {archive.length > 0 && count !== 0 && <Archive archive={archive} />}
     </section>
   );
 }

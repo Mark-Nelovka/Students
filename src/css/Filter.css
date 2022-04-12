@@ -9,11 +9,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   text-decoration: none;
-  list-style: none;
-  height: 40px;
   background-color: #5b5b5b;
-  margin: 0 0;
-  padding-left: 0;
 }
 
 .container_filter {

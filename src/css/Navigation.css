@@ -1,5 +1,11 @@
 .header {
   padding: 14px 47px 14px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav {
@@ -58,5 +64,19 @@
   background-color: #a6192e;
   color: #ffffff;
   margin-right: 28px;
+}
+
+.container-user {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user_foto {
+  margin-right: 11px;
 }
 /*# sourceMappingURL=Navigation.css.map */

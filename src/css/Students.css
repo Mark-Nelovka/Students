@@ -11,7 +11,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 14px 26px 14px 23px;
+  margin-bottom: 18px;
 }
 
 .students_checkbox {
@@ -19,6 +19,7 @@
   height: 12px;
   color: #828282;
   margin-right: 26px;
+  margin-left: 23px;
 }
 
 .students_container-filter-name {
@@ -155,6 +156,23 @@
   background: #f9f9f9;
 }
 
+.students_item-archive {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 21px 8px 23px;
+  -webkit-box-shadow: 0px 1px 4px rgba(60, 52, 135, 0.15);
+          box-shadow: 0px 1px 4px rgba(60, 52, 135, 0.15);
+}
+
+.students_item-archive:nth-child(2n) {
+  background: #f9f9f9;
+}
+
 .students_name {
   font-family: 'Rubik';
   font-style: normal;
@@ -277,5 +295,45 @@
   padding: 5px 5px;
   cursor: pointer;
   margin-left: auto;
+}
+
+.students_container-info {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.students_info-change {
+  padding: 10px 10px;
+  width: 32px;
+  height: 32px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.students_info-progres {
+  padding: 10px 10px;
+  width: 32px;
+  height: 32px;
+  background-color: #f2f2f2;
+  border: none;
+  margin-right: 15px;
+  margin-left: 8px;
+}
+
+.action {
+  margin-left: 105px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  font-size: 14px;
+  color: #777777;
+  opacity: 0.8;
 }
 /*# sourceMappingURL=Students.css.map */
