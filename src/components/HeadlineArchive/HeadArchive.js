@@ -3,10 +3,7 @@ import '../../css/HeadArchive.css';
 import { ReactComponent as CleaerSelected } from '../images/clear-filter.svg';
 import { ReactComponent as ExportIcon } from '../images/export-csv.svg';
 import { ReactComponent as ArchiveIcon } from '../images/Archive-icon.svg';
-import {
-  clearAllStudents,
-  check,
-} from '../../redux/students/studentOperations';
+import { clearAllStudents } from '../../redux/students/studentOperations';
 
 function HeadArchive() {
   const countArchiveStudents = useSelector(state => state.students.archive);
@@ -14,7 +11,6 @@ function HeadArchive() {
 
   const clearSelectedAllStudents = () => {
     dispatch(clearAllStudents());
-    dispatch(check(false));
     window.location.reload();
   };
 

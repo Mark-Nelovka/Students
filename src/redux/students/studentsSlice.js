@@ -1,12 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 import {
   fetchStudent,
-  check,
   countArchiveStudents,
   clearAllStudents,
   pageIncrement,
   pageDecrement,
-  filter,
   filterArr,
   searchStudent,
   idForModal,
@@ -15,11 +13,9 @@ import {
 
 const initialState = {
   students: null,
-  isLoading: false,
   totalCount: 0,
   archive: 0,
   studForPagination: null,
-  filter: '',
   idForModal: 0,
   arrForArchive: [],
 };
@@ -36,9 +32,6 @@ const authSlice = createSlice({
     [fetchStudent.rejected](state, _) {
       return state;
     },
-    [check](state, action) {
-      state.check = action.payload;
-    },
     [countArchiveStudents](state, action) {
       state.archive = action.payload;
     },
@@ -46,7 +39,6 @@ const authSlice = createSlice({
       state.archive = 0;
     },
     [pageIncrement.fulfilled](state, action) {
-      // console.log(action.payload);
       state.studForPagination = [...state.students, ...action.payload];
       state.students = action.payload;
     },
@@ -54,12 +46,11 @@ const authSlice = createSlice({
       return state;
     },
     [pageDecrement.fulfilled](state, action) {
-      // console.log(action.payload);
       state.studForPagination = action.payload;
       state.students = action.payload;
     },
-    [filter](state, action) {
-      state.filter = action.payload;
+    [pageDecrement.rejected](state, action) {
+      return state;
     },
     [filterArr](state, action) {
       state.students = action.payload;
@@ -67,12 +58,14 @@ const authSlice = createSlice({
     [searchStudent.fulfilled](state, action) {
       state.students = action.payload;
     },
+    [searchStudent.rejected](state, action) {
+      return state;
+    },
     [idForModal](state, action) {
       state.idForModal = Number(action.payload);
     },
     [arrArchive](state, action) {
       state.arrForArchive.push(action.payload);
-      // state.arrForArchive = [...state.arrForArchive, ...action.payload];
     },
   },
 });

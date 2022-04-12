@@ -4,7 +4,7 @@ import { ReactComponent as SearchIcon } from '../images/Search-icon.svg';
 import { ReactComponent as ExportCsv } from '../images/export-csv.svg';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { filter, searchStudent } from '../../redux/students/studentOperations';
+import { searchStudent } from '../../redux/students/studentOperations';
 
 function Headline() {
   const [info, setInfo] = useState('');
@@ -14,7 +14,6 @@ function Headline() {
   const inputChange = e => {
     const { value } = e.target;
     setInfo(value);
-    dispatch(filter(value));
   };
 
   const searchStudentForm = e => {
