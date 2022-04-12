@@ -1,0 +1,81 @@
+@import '../../sass/variables';
+
+// SECTION
+
+.section-head-archive {
+  display: flex;
+  align-items: center;
+  background: $filter-color;
+  padding: 14px 40px;
+}
+
+// CONTAINERS
+
+.head-archive_container-cancel-selection > button {
+  display: flex;
+  align-items: center;
+  @include style-text;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-right: 19px;
+}
+
+.head-archive_container-export {
+  display: flex;
+  align-items: center;
+  @include style-text;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-right: 18px;
+}
+
+.head-archive_container-archive {
+  display: flex;
+  align-items: center;
+  @include style-text;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #424242;
+}
+
+// ITEMS
+
+.head-archive_student-secelcted {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-right: 731px;
+}
+
+.head-archive_container-cancel-selection_clear-selected {
+  fill: #ffffff;
+  margin-right: 9px;
+}
+
+.head-archive_container-export_export-icon {
+  fill: #ffffff;
+  margin-right: 9px;
+}
+
+.head-archive_container-archive_archive-icon {
+  fill: #424242;
+  margin-right: 8px;
+}
+
+.head-archive_container-cancel-selection_button-clear {
+  border: none;
+  background-color: inherit;
+  width: auto;
+  height: auto;
+  padding: 0 0;
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-#containerModal {
+.container-modal {
   position: absolute;
   height: auto;
   padding: 20px 198px 24px 60px;
@@ -11,11 +11,12 @@
   z-index: 5;
 }
 
-#identification {
+.modal_identification {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 140%;
   line-height: 140%;
   text-transform: uppercase;
   color: #777777;
@@ -28,15 +29,11 @@
   margin-bottom: 12px;
 }
 
-#identification > b {
+.modal_identification > b {
   color: #5b5b5b;
 }
 
-#studentName {
-  margin-right: 15px;
-}
-
-#containerButtonFilter {
+.modal_container-button-filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,7 +43,7 @@
   margin-bottom: 12px;
 }
 
-#buttonFilter {
+.modal_container-button-filter_button-filter {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
@@ -68,12 +65,16 @@
           align-items: center;
 }
 
-#arrow {
+.modal_identification_student-name {
+  margin-right: 15px;
+}
+
+.modal_container-button-filter_arrow {
   fill: inherit;
   margin-left: 10px;
 }
 
-#dataFilter {
+.modal_container-date_data-filter {
   border-top: none;
   border-left: none;
   border-right: none;
@@ -90,7 +91,7 @@
   width: 199px;
 }
 
-#containerDate {
+.modal_container-date {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,7 +101,7 @@
           align-items: center;
 }
 
-#date {
+.modal_container-date_data {
   fill: inherit;
   margin-left: 14px;
   position: absolute;
@@ -108,14 +109,14 @@
   right: 0;
 }
 
-#line {
+.modal_line {
   width: 1102px;
   height: 1px;
   background-color: #a6192e;
   margin-bottom: 12px;
 }
 
-#containerScore {
+.modal_container-score {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,7 +125,7 @@
           align-items: center;
 }
 
-#containerSpeed {
+.modal_container-speed {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,27 +135,28 @@
   margin-bottom: 12px;
 }
 
-#score {
+.modal_score {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 140%;
+  font-size: 14px;
   text-transform: uppercase;
   color: #777777;
 }
 
-#speed {
+.modal_speed {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 140%;
   text-transform: uppercase;
   color: #777777;
 }
 
-#idealText {
+.modal_ideal-text {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -164,7 +166,7 @@
   color: #4285f4;
 }
 
-#idealTextSpeed {
+.modal_ideal-text-speed {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -174,7 +176,7 @@
   color: #4285f4;
 }
 
-#goodText {
+.modal_good-text {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -184,7 +186,7 @@
   color: #0f9d58;
 }
 
-#goodTextSpeed {
+.modal_good-text-speed {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -194,7 +196,7 @@
   color: #0f9d58;
 }
 
-#normText {
+.modal_norm-text {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -204,7 +206,7 @@
   color: #e2b534;
 }
 
-#badText {
+.modal_bad-text {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -214,7 +216,7 @@
   color: #db4437;
 }
 
-#badTextSpeed {
+.modal_bad-text-speed {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -224,7 +226,7 @@
   color: #db4437;
 }
 
-#ideal {
+.modal_ideal {
   width: 12px;
   height: 12px;
   background: #4285f4;
@@ -233,7 +235,7 @@
   margin-right: 8px;
 }
 
-#idealSpeed {
+.modal_ideal-speed {
   width: 12px;
   height: 12px;
   background: #4285f4;
@@ -242,7 +244,7 @@
   margin-right: 8px;
 }
 
-#good {
+.modal_good {
   width: 12px;
   height: 12px;
   background: #0f9d58;
@@ -251,7 +253,7 @@
   margin-right: 8px;
 }
 
-#goodSpeed {
+.modal_good-speed {
   width: 12px;
   height: 12px;
   background: #0f9d58;
@@ -260,7 +262,7 @@
   margin-right: 8px;
 }
 
-#norm {
+.modal_norm {
   width: 12px;
   height: 12px;
   background: #e2b534;
@@ -269,7 +271,7 @@
   margin-right: 8px;
 }
 
-#bad {
+.modal_bad {
   width: 12px;
   height: 12px;
   background: #db4437;
@@ -278,7 +280,7 @@
   margin-right: 8px;
 }
 
-#badSpeed {
+.modal_bad-speed {
   width: 12px;
   height: 12px;
   background: #db4437;
@@ -287,7 +289,7 @@
   margin-right: 8px;
 }
 
-#containerHeadlineResults {
+.modal_container-head-line-results {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -297,59 +299,59 @@
   margin-bottom: 22px;
 }
 
-#number {
+.modal_number {
   margin-right: 22px;
   font-size: 16px;
 }
 
-#headResTest {
+.modal_head-test {
   display: inline-block;
   width: 300px;
   margin-right: 12px;
 }
 
-#headResScope {
+.modal_head-scope {
   display: inline-block;
   width: 48px;
   margin-right: 12px;
 }
 
-#headResSpeed {
+.modal_head-speed {
   display: inline-block;
   width: 113px;
   margin-right: 12px;
 }
 
-#headResTotal {
+.modal_head-total {
   display: inline-block;
   width: 68px;
   margin-right: 12px;
 }
 
-#headResExpSpeed {
+.modal_head-exp-speed {
   display: inline-block;
   width: 119px;
   margin-right: 12px;
 }
 
-#headResConcept {
+.modal_head-concept {
   display: inline-block;
   width: 152px;
   margin-right: 12px;
 }
 
-#headResDate {
+.modal_head-date {
   display: inline-block;
   width: 112px;
   margin-right: 12px;
 }
 
-#list {
+.modal_list {
   margin: 0;
   padding-left: 16px;
 }
 
-#resultItemList {
+.modal_result-item {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -359,57 +361,57 @@
   margin-bottom: 16px;
 }
 
-#itemLabel {
+.modal_item-label {
   display: inline-block;
   width: 289px;
   margin-left: 23px;
   margin-right: 12px;
 }
 
-#itemScope {
+.modal_item-scope {
   display: inline-block;
   width: 48px;
   margin-right: 12px;
 }
 
-#itemSpeed {
+.modal_item-speed {
   display: inline-block;
   width: 113px;
   margin-right: 12px;
   color: #4285f4;
 }
 
-#noSpeed {
+.modal_no-speed {
   display: inline-block;
   width: 113px;
   margin-right: 12px;
 }
 
-#itemTotal {
+.modal_item-total {
   display: inline-block;
   width: 68px;
   margin-right: 12px;
 }
 
-#itemExpSpeed {
+.modal_item-exp-speed {
   display: inline-block;
   width: 119px;
   margin-right: 12px;
 }
 
-#itemConcept {
+.modal_item-concept {
   display: inline-block;
   width: 152px;
   margin-right: 12px;
 }
 
-#itemData {
+.modal_item-data {
   display: inline-block;
   width: 112px;
   margin-right: 28.5px;
 }
 
-#containerAverageTable {
+.modal_container-average-table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,7 +426,7 @@
   text-transform: uppercase;
 }
 
-#average {
+.modal_container-average-table_average {
   display: inline-block;
   width: 300px;
   margin-left: 34px;
@@ -432,14 +434,14 @@
   color: #777777;
 }
 
-#percentegare {
+.modal_container-average-table_percentegare {
   display: inline-block;
   width: 78px;
   margin-right: 12px;
   color: #4285f4;
 }
 
-#above {
+.modal_container-average-table_above {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
@@ -449,5 +451,22 @@
   color: #4285f4;
   width: 87px;
   display: inline-block;
+}
+
+.modal_identification_arrow-close-button {
+  position: absolute;
+  border: none;
+  margin-left: auto;
+  background-color: inherit;
+  top: 22px;
+  right: 15px;
+}
+
+.modal_identification_arrow-close {
+  fill: inherit;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  padding: 5px 5px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=Modal.css.map */

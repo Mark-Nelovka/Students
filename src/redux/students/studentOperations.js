@@ -83,6 +83,8 @@ const filterArr = createAction('students/filterArr');
 
 const idForModal = createAction('student/modal');
 
+const arrArchive = createAction('students/arrArchive');
+
 export {
   fetchStudent,
   check,
@@ -94,4 +96,5 @@ export {
   filterArr,
   searchStudent,
   idForModal,
+  arrArchive,
 };

@@ -1,3 +1,94 @@
-.qwe {
-  fill: none;
+@import '../../sass/variables';
+
+// SECTIONS
+
+.headline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 6px;
+}
+
+// CONTAINERS
+
+.headline_container-input {
+  position: relative;
+  margin-right: 202px;
+}
+
+.headline_container-download {
+  display: flex;
+  align-items: center;
+}
+
+// ITEMS
+
+.headline_table-name {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $pagination-color;
+  margin-right: 296px;
+}
+
+.headline_input-search-student {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: 140%;
+  color: $filter-color;
+  width: 499px;
+  background: #f2f2f2;
+  padding: 6px 14px 6px 12px;
+  border: none;
+}
+
+.headline_container-download_export {
+  @include style-text;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: $filter-color;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.headline_search-button {
+  position: absolute;
+  top: 10;
+  bottom: 10;
+  right: 15px;
+  fill: inherit;
+  width: 12px;
+  height: 12px;
+  width: auto;
+  height: auto;
+  background-color: inherit;
+  border: none;
+}
+
+// ICONS
+
+.headline_search-icon {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  right: 15px;
+  fill: inherit;
+  width: 12px;
+  height: 12px;
+}
+
+.headline_export-icon {
+  fill: $filter-color;
+  width: 9px;
+  height: 11px;
+  margin-right: 9px;
 }

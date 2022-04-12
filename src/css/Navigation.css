@@ -1,40 +1,44 @@
-@import '../../sass/Filter.scss';
-
 .header {
   padding: 14px 47px 14px 0px;
 }
 
 .nav {
   margin-left: 233px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav > a {
   margin-right: 94px;
 }
 
-.listMenu {
+.list-menu {
   text-decoration: none;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 0;
   padding-left: 0;
 }
 
-/* .item {
-  padding: 6px 12px;
-} */
-
 .link {
   font-family: 'Rubik';
   font-style: normal;
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  font-size: 14px;
   line-height: 140%;
   text-transform: uppercase;
-  color: var(--menu-color);
+  color: #777777;
   text-decoration: none;
   margin-right: 40px;
 }
@@ -42,14 +46,17 @@
 .active {
   font-family: 'Rubik';
   font-style: normal;
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  font-size: 14px;
   line-height: 140%;
   text-transform: uppercase;
-  color: var(--menu-color);
+  color: #777777;
   text-decoration: none;
   padding: 6px 12px;
-  background-color: var(--active-menu-color);
+  background-color: #a6192e;
   color: #ffffff;
   margin-right: 28px;
 }
+/*# sourceMappingURL=Navigation.css.map */

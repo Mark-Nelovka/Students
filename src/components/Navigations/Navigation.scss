@@ -1,0 +1,47 @@
+@import '../../sass/variables';
+
+.header {
+  padding: 14px 47px 14px 0px;
+}
+
+.nav {
+  margin-left: 233px;
+  display: flex;
+  align-items: center;
+}
+
+.nav > a {
+  margin-right: 94px;
+}
+
+.list-menu {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0 0;
+  padding-left: 0;
+}
+
+.link {
+  @include style-text;
+  font-size: $font-size;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: $menu-color;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+.active {
+  @include style-text;
+  font-size: $font-size;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: $menu-color;
+  text-decoration: none;
+  padding: 6px 12px;
+  background-color: $active-menu-color;
+  color: #ffffff;
+  margin-right: 28px;
+}

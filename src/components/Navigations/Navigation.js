@@ -1,57 +1,57 @@
-import s from './Navigation.module.css';
+import '../../css/Navigation.css';
 import { NavLink } from 'react-router-dom';
 function Navigation() {
   return (
-    <header className={s.header}>
-      <nav className={s.nav}>
-        <NavLink to="/" className={s.link}>
+    <header className="header">
+      <nav className="nav">
+        <NavLink to="/" className="link">
           SCHOOL 1
         </NavLink>
-        <ul className={s.listMenu}>
-          <li className={s.item}>
+        <ul className="list-menu">
+          <li className="item">
             <NavLink
               to="/"
-              className={({ isActive }) => `${isActive ? s.active : s.link}`}
+              className={({ isActive }) => `${isActive ? 'active' : 'link'}`}
             >
               ANALYTICS
             </NavLink>
           </li>
-          <li className={s.item}>
+          <li className="item">
             <NavLink
               to="/"
-              className={({ isActive }) => `${isActive ? s.active : s.link}`}
+              className={({ isActive }) => `${isActive ? 'active' : 'link'}`}
             >
               GRADEBOOKS
             </NavLink>
           </li>
-          <li className={s.item}>
+          <li className="item">
             <NavLink
               to="/"
-              className={({ isActive }) => `${isActive ? s.active : s.link}`}
+              className={({ isActive }) => `${isActive ? 'active' : 'link'}`}
             >
               TESTS
             </NavLink>
           </li>
-          <li className={s.item}>
+          <li className="item">
             <NavLink
               to="/students"
-              className={({ isActive }) => `${isActive ? s.active : s.link}`}
+              className={({ isActive }) => `${isActive ? 'active' : 'link'}`}
             >
               STUDENTS
             </NavLink>
           </li>
-          <li className={s.item}>
+          <li className="item">
             <NavLink
               to="/"
-              className={({ isActive }) => `${isActive ? s.active : s.link}`}
+              className={({ isActive }) => `${isActive ? 'active' : 'link'}`}
             >
               TEACHERS
             </NavLink>
           </li>
-          <li className={s.item}>
+          <li className="item">
             <NavLink
               to="/"
-              className={({ isActive }) => `${isActive ? s.active : s.link}`}
+              className={({ isActive }) => `${isActive ? 'active' : 'link'}`}
             >
               ARCHIVE
             </NavLink>

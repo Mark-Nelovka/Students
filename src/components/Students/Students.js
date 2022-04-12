@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
-import s from './Students.module.css';
+import { useEffect } from 'react';
+import Archive from 'components/Archive/Archive';
+import '../../css/Students.css';
 import { ReactComponent as FilterName } from '../images/filter-name.svg';
 import { ReactComponent as ArrowNumber } from '../images/arrows-number.svg';
 import { ReactComponent as Info } from '../images/info.svg';
@@ -9,6 +10,7 @@ import {
   fetchStudent,
   countArchiveStudents,
   idForModal,
+  arrArchive,
 } from '../../redux/students/studentOperations';
 import ModalInfoStudent from 'components/Modal/Moda';
 
@@ -17,12 +19,15 @@ function Students() {
   const students = useSelector(state => state.students.students);
   let count = useSelector(state => state.students.archive);
   const idModal = useSelector(state => state.students.idForModal);
+  const archive = useSelector(state => state.students.arrForArchive);
 
   const studentChecked = e => {
-    const { checked } = e.target;
+    const { checked, id } = e.target;
     if (checked === true) {
       count += 1;
       dispatch(countArchiveStudents(count));
+      const arr = students.find(data => data.id === Number(id));
+      dispatch(arrArchive(arr));
       return;
     }
 
@@ -36,7 +41,6 @@ function Students() {
   const moreInfo = e => {
     const { id } = e.target;
     dispatch(idForModal(id));
-    console.log(idModal);
   };
 
   useEffect(() => {
@@ -47,41 +51,40 @@ function Students() {
     return;
   });
   return (
-    <section className={s.sectionStudents}>
-      <div className={s.studentItemHead}>
-        <input className={s.checkbox} type="checkbox" />
-        <div className={s.containerFilterName}>
-          <span className={s.studentNameHead}>Name</span>
-          <FilterName className={s.filterNameIcon} />
+    <section className="students">
+      <div className="students_head">
+        <input className="students_checkbox" type="checkbox" />
+        <div className="students_container-filter-name">
+          <span className="students_name-head">Name</span>
+          <FilterName className="students_filter-name-icon" />
         </div>
-        <div className={s.containerFilterId}>
-          <span className={s.studentIdHead}>Id</span>
-          <ArrowNumber className={s.arrowNumber} />
-        </div>
-
-        <span className={s.studentClass}>Class</span>
-        <div className={s.containerFilterScore}>
-          <span className={s.studentScoreHead}>Av.Score, %</span>
-          <ArrowNumber className={s.arrowNumber} />
-        </div>
-        <div className={s.containerFilterSpeed}>
-          <span className={s.studentSpeedHead}>Av.Speed</span>
-          <ArrowNumber className={s.arrowNumber} />
+        <div className="students_container-filter-id">
+          <span className="students_id-head">Id</span>
+          <ArrowNumber className="students_arrow-number" />
         </div>
 
-        <span className={s.studentParentName}>Parents</span>
+        <span className="students_class">Class</span>
+        <div className="students_container-filter-score">
+          <span className="students_score-head">Av.Score, %</span>
+          <ArrowNumber className="students_arrow-number" />
+        </div>
+        <div className="students_container-filter-speed">
+          <span className="students_speed-head">Av.Speed</span>
+          <ArrowNumber className="students_arrow-number" />
+        </div>
+
+        <span className="students_parent-name">Parents</span>
       </div>
 
-      <ul className={s.studentsList}>
+      <ul className="students_list">
         {students &&
           students.map(student => {
-            if (student.id == idModal) {
+            if (student.id === idModal) {
               return <ModalInfoStudent props={idModal} />;
             }
             return (
-              <li key={student.id} className={s.studentItem}>
+              <li key={student.id} className="students_item">
                 <input
-                  className={s.checkbox}
                   type="checkbox"
                   onChange={e => {
                     studentChecked(e);
@@ -89,34 +92,38 @@ function Students() {
                   id={student.id}
                 />
 
-                <span className={s.studentName}>{student.name}</span>
-                <span className={s.studentId}>{student.id}</span>
-                <span className={s.studentClass}>{student.class}</span>
-                <span className={s.studentScore}>{student.score}</span>
-                <span className={s.studentSpeed}>{student.speed}</span>
-                <div className={s.containerParentName}>
-                  <Info className={s.info} />
-                  <span className={s.studentParentName}>
+                <span className="students_name">{student.name}</span>
+                <span className="students_id">{student.id}</span>
+                <span className="students_class">{student.class}</span>
+                {student.score > '76%' ? (
+                  <span className="students_score">{student.score}</span>
+                ) : (
+                  <span className="students_score-bad">{student.score}</span>
+                )}
+                {student.speed === 'Below Expected' ? (
+                  <span className="students_speed-below">{student.speed}</span>
+                ) : (
+                  <span className="students_speed-above">{student.speed}</span>
+                )}
+
+                <div className="students_container-parent-name">
+                  <Info className="students_info" />
+                  <span className="students_parent-name">
                     {student.parents.join(', ')}
                   </span>
                 </div>
-                <button
+                <ArrowDown
+                  className="students_arrow-down-icon"
+                  width="10"
+                  height="5"
                   onClick={moreInfo}
-                  type="button"
-                  className={s.buttonArrowDown}
                   id={student.id}
-                >
-                  <ArrowDown
-                    className={s.arrowDownIcon}
-                    width="10"
-                    height="5"
-                    id={student.id}
-                  />
-                </button>
+                />
               </li>
             );
           })}
       </ul>
+      {archive.length > 0 && <Archive archive={archive} />}
     </section>
   );
 }

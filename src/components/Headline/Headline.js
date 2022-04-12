@@ -1,6 +1,5 @@
-import s from './Headline.module.css';
+import '../../css/Headline.css';
 import { CSVLink } from 'react-csv';
-import axios from 'axios';
 import { ReactComponent as SearchIcon } from '../images/Search-icon.svg';
 import { ReactComponent as ExportCsv } from '../images/export-csv.svg';
 import { useState } from 'react';
@@ -11,22 +10,6 @@ function Headline() {
   const [info, setInfo] = useState('');
   const students = useSelector(state => state.students.students);
   const dispatch = useDispatch();
-  // const headers = [
-  //   { label: 'id', key: 'id' },
-  //   { label: 'Name', key: 'name' },
-  //   { label: 'class', key: 'class' },
-  //   { label: 'score', key: 'score' },
-  //   { label: 'speed', key: 'speed' },
-  //   { label: 'tests', key: 'tests' },
-  //   { label: 'parents', key: 'parents' },
-  // ];
-  const [csvFile, setCsvFile] = useState([
-    {
-      filename: 'Tests.csv',
-      // headers: headers,
-      data: students,
-    },
-  ]);
 
   const inputChange = e => {
     const { value } = e.target;
@@ -37,17 +20,16 @@ function Headline() {
   const searchStudentForm = e => {
     e.preventDefault();
     dispatch(searchStudent(info));
-    // setInfo('');
   };
 
   return (
-    <div className={s.container}>
-      <h1 className={s.tableName}>Students</h1>
-      <form onSubmit={searchStudentForm} className={s.containerInput}>
+    <section className="headline">
+      <h1 className="headline_table-name">Students</h1>
+      <form onSubmit={searchStudentForm} className="headline_container-input">
         <label>
           <input
             onChange={inputChange}
-            className={s.inputSearchStudent}
+            className="headline_input-search-student"
             type="text"
             name="search"
             value={info}
@@ -55,20 +37,24 @@ function Headline() {
           />
         </label>
 
-        <button type="submit" className={s.searchButton}>
-          <SearchIcon className={s.searchIcon} />
+        <button type="submit" className="headline_search-button">
+          <SearchIcon className="headline_search-icon" />
         </button>
       </form>
 
       {students && (
-        <div className={s.containerDownload}>
-          <ExportCsv className={s.exportIcon} />
-          <CSVLink filename={'Test.csv'} className={s.export} data={students}>
+        <div className="headline_container-download">
+          <ExportCsv className="headline_export-icon" />
+          <CSVLink
+            filename={'Test.csv'}
+            className="headline_container-download_export"
+            data={students}
+          >
             Export to csv
           </CSVLink>
         </div>
       )}
-    </div>
+    </section>
   );
 }
 

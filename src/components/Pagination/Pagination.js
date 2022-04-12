@@ -1,4 +1,4 @@
-import s from './Pagination.module.css';
+import '../../css/Pagination.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { ReactComponent as ArrowDown } from '../images/arrow-down.svg';
 import { ReactComponent as ArrowRight } from '../images/arrow-right.svg';
@@ -29,28 +29,38 @@ function Pagination() {
   };
 
   return (
-    <div className={s.containerPagination}>
-      <div className={s.pageCount}>
+    <section className="pagination">
+      <div className="pagination_container-pagination_page-count">
         <span>Rows per page: 10</span>
-        <ArrowDown className={s.arrowDown} width="8" height="4" />
+        <ArrowDown
+          className="pagination_container-pagination_arrow-down"
+          width="8"
+          height="4"
+        />
       </div>
-      <div className={s.pagination}>
+      <div className="pagination_container-pagination">
         {pag && (
           <span>{`${pag[0].id}-${studForPag.length} of ${totalCount}`}</span>
         )}
 
-        <div className={s.containerButtonPargination}>
-          <button onClick={pageDecrementButton} className={s.buttonLeft}>
+        <div className="pagination_container-button">
+          <button
+            onClick={pageDecrementButton}
+            className="pagination_container-button_button-left"
+          >
             <ArrowLeft
-              className={s.arrowLeft}
+              className="pagination_arrow-left"
               id="left"
               width="10"
               height="16"
             />
           </button>
-          <button onClick={pageIncrementButton} className={s.buttonRight}>
+          <button
+            onClick={pageIncrementButton}
+            className="pagination_container-button_button-right"
+          >
             <ArrowRight
-              className={s.arrowRight}
+              className="pagination_arrow-right"
               id="right"
               width="10"
               height="16"
@@ -58,7 +68,7 @@ function Pagination() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

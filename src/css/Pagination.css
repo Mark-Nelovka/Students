@@ -1,0 +1,84 @@
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination_container-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  font-size: 14px;
+  color: #5b5b5b;
+}
+
+.pagination_container-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pagination_container-pagination_arrow-down {
+  fill: inherit;
+  margin-left: 11px;
+  margin-right: 31px;
+}
+
+.pagination_arrow-right {
+  fill: inherit;
+}
+
+.pagination_arrow-left {
+  fill: #5b5b5b;
+  margin-right: 43px;
+  margin-left: 29px;
+}
+
+.pagination_container-button_button-right {
+  border: none;
+  background-color: inherit;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  padding: 0 0;
+}
+
+.pagination_container-button_button-left {
+  border: none;
+  background-color: inherit;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  padding: 0 0;
+}
+
+.pagination_container-pagination_page-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  font-size: 14px;
+  color: #5b5b5b;
+}
+/*# sourceMappingURL=Pagination.css.map */

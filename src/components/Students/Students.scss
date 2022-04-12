@@ -1,0 +1,205 @@
+@import '../../sass/variables';
+
+.students {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 18px;
+}
+
+.students_head {
+  display: flex;
+  align-items: center;
+  padding: 14px 26px 14px 23px;
+}
+
+.students_checkbox {
+  width: 12px;
+  height: 12px;
+  color: $text-color;
+  margin-right: 26px;
+}
+
+.students_container-filter-name {
+  width: 300px;
+  margin-right: 24px;
+}
+
+.students_name-head {
+  @include style-text;
+  font-size: $font-size;
+  color: $text-color;
+  display: inline-block;
+  width: 287px;
+}
+
+.students_container-filter-id {
+  display: flex;
+  align-items: center;
+  width: 96px;
+  margin-right: 28px;
+}
+
+.students_id-head {
+  @include style-text;
+  font-size: $font-size;
+  color: $text-color;
+  display: inline-block;
+  width: 88px;
+}
+
+.students_class {
+  @include style-text;
+  font-size: $font-size;
+  color: $text-color;
+  display: inline-block;
+  width: 40px;
+  margin-right: 24px;
+}
+
+.students_container-filter-score {
+  display: flex;
+  align-items: center;
+  width: 94px;
+  margin-right: 29px;
+}
+
+.students_score-head {
+  @include style-text;
+  font-size: $font-size;
+  color: $text-color;
+  display: inline-block;
+  width: 100px;
+}
+
+.students_container-filter-speed {
+  display: flex;
+  align-items: center;
+  margin-right: 29px;
+}
+
+.students_speed-head {
+  @include style-text;
+  font-size: $font-size;
+  color: $text-color;
+  display: inline-block;
+  width: 106px;
+}
+
+.students_parent-name {
+  @include style-text;
+  font-size: $font-size;
+  color: $text-color;
+  display: inline-block;
+  width: 250px;
+}
+
+.students_list {
+  text-decoration: none;
+  list-style: none;
+  margin: 0 0;
+  padding-left: 0;
+}
+
+.students_item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 14px 21px 14px 23px;
+  box-shadow: 0px 1px 4px rgba(60, 52, 135, 0.15);
+  &:nth-child(2n) {
+    background: #f9f9f9;
+  }
+}
+
+.students_name {
+  @include style-text;
+  font-size: $font-size;
+  color: $text-color;
+  display: inline-block;
+  width: 300px;
+  margin-right: 24px;
+  margin-left: 26px;
+}
+
+.students_id {
+  @include style-text;
+  font-size: $font-size;
+  color: $text-color;
+  display: inline-block;
+  margin-right: 28px;
+  width: 96px;
+}
+
+.students_score {
+  @include style-text;
+  font-size: $font-size;
+  color: $as-expected-color;
+  display: inline-block;
+  width: 100px;
+  margin-right: 24px;
+}
+
+.students_score-bad {
+  @include style-text;
+  font-size: $font-size;
+  color: $accuracy-color;
+  display: inline-block;
+  width: 100px;
+  margin-right: 24px;
+}
+
+.students_speed-below {
+  @include style-text;
+  font-size: $font-size;
+  color: $below-expected-color;
+  display: inline-block;
+  width: 112px;
+  margin-right: 29px;
+}
+
+.students_speed-above {
+  @include style-text;
+  font-size: $font-size;
+  color: $above-expected-color;
+  display: inline-block;
+  width: 112px;
+  margin-right: 29px;
+}
+
+.students_container-parent-name {
+  @include style-text;
+  font-size: $font-size;
+  color: $text-color;
+  display: inline-block;
+  width: 220px;
+  display: flex;
+  align-items: center;
+}
+
+/* ICONS  */
+
+.students_filter-name-icon {
+  width: 13px;
+  height: 13px;
+  fill: inherit;
+}
+
+.students_arrow-number {
+  width: 6px;
+  height: 16px;
+  fill: inherit;
+}
+
+.students_info {
+  width: 13px;
+  height: 13px;
+  fill: inherit;
+  margin-right: 7px;
+}
+
+.students_arrow-down-icon {
+  fill: inherit;
+  padding: 5px 5px;
+  cursor: pointer;
+  margin-left: auto;
+}

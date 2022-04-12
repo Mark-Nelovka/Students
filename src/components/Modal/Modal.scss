@@ -1,6 +1,7 @@
-#containerModal {
+@import '../../sass/variables';
+
+.container-modal {
   position: absolute;
-  //   width: auto;
   height: auto;
   padding: 20px 198px 24px 60px;
   background: #f2f2f2;
@@ -10,33 +11,26 @@
   z-index: 5;
 }
 
-#identification {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+.modal_identification {
+  @include style-text;
   line-height: 140%;
   text-transform: uppercase;
-  color: #777777;
+  color: $menu-color;
   display: flex;
   align-items: center;
   & > b {
-    color: #5b5b5b;
+    color: $pagination-color;
   }
   margin-bottom: 12px;
 }
 
-#studentName {
-  margin-right: 15px;
-}
-
-#containerButtonFilter {
+.modal_container-button-filter {
   display: flex;
   align-items: baseline;
   margin-bottom: 12px;
 }
 
-#buttonFilter {
+.modal_container-button-filter_button-filter {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
@@ -45,7 +39,7 @@
   text-transform: uppercase;
   color: #5b5b5b;
   background: #ffffff;
-  border: 1px solid #c0c0c0;
+  border: 1px solid $filter-color;
   box-sizing: border-box;
   padding: 6px 18px 6px 12px;
   margin-right: 16px;
@@ -53,35 +47,35 @@
   align-items: center;
 }
 
-#arrow {
+.modal_identification_student-name {
+  margin-right: 15px;
+}
+
+.modal_container-button-filter_arrow {
   fill: inherit;
   margin-left: 10px;
 }
 
-#dataFilter {
+.modal_container-date_data-filter {
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom-color: #c0c0c0;
   background-color: inherit;
   padding: 0 0 7px 0;
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 140%;
+  @include style-text;
   text-transform: uppercase;
-  color: #c0c0c0;
+  color: $filter-color;
   width: 199px;
 }
 
-#containerDate {
+.modal_container-date {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-#date {
+.modal_container-date_data {
   fill: inherit;
   margin-left: 14px;
   position: absolute;
@@ -89,115 +83,84 @@
   right: 0;
 }
 
-#line {
+.modal_line {
   width: 1102px;
   height: 1px;
-  background-color: #a6192e;
+  background-color: $active-menu-color;
   margin-bottom: 12px;
 }
 
-#containerScore {
+.modal_container-score {
   display: flex;
   align-items: center;
 }
 
-#containerSpeed {
+.modal_container-speed {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
 }
 
-#score {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 140%;
+.modal_score {
+  @include style-text;
+  font-size: 14px;
   text-transform: uppercase;
-  color: #777777;
+  color: $menu-color;
 }
 
-#speed {
+.modal_speed {
   font-family: 'Rubik';
   font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: $font-weight;
+  font-size: $font-size;
   line-height: 140%;
   text-transform: uppercase;
-  color: #777777;
+  color: $menu-color;
 }
 
-#idealText {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 140%;
+.modal_ideal-text {
+  @include style-text;
   text-transform: uppercase;
   color: #4285f4;
 }
 
-#idealTextSpeed {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 140%;
+.modal_ideal-text-speed {
+  @include style-text;
   text-transform: uppercase;
   color: #4285f4;
 }
 
-#goodText {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 140%;
+.modal_good-text {
+  @include style-text;
   text-transform: uppercase;
   color: #0f9d58;
 }
 
-#goodTextSpeed {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 140%;
+.modal_good-text-speed {
+  @include style-text;
   text-transform: uppercase;
   color: #0f9d58;
 }
 
-#normText {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 140%;
+.modal_norm-text {
+  @include style-text;
   text-transform: uppercase;
   color: #e2b534;
 }
 
-#badText {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 140%;
+.modal_bad-text {
+  @include style-text;
   text-transform: uppercase;
   color: #db4437;
 }
 
-#badTextSpeed {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 140%;
+.modal_bad-text-speed {
+  @include style-text;
   text-transform: uppercase;
   color: #db4437;
 }
 
-#ideal {
+.modal_ideal {
   width: 12px;
   height: 12px;
   background: #4285f4;
@@ -206,7 +169,7 @@
   margin-right: 8px;
 }
 
-#idealSpeed {
+.modal_ideal-speed {
   width: 12px;
   height: 12px;
   background: #4285f4;
@@ -215,7 +178,7 @@
   margin-right: 8px;
 }
 
-#good {
+.modal_good {
   width: 12px;
   height: 12px;
   background: #0f9d58;
@@ -224,7 +187,7 @@
   margin-right: 8px;
 }
 
-#goodSpeed {
+.modal_good-speed {
   width: 12px;
   height: 12px;
   background: #0f9d58;
@@ -233,7 +196,7 @@
   margin-right: 8px;
 }
 
-#norm {
+.modal_norm {
   width: 12px;
   height: 12px;
   background: #e2b534;
@@ -242,7 +205,7 @@
   margin-right: 8px;
 }
 
-#bad {
+.modal_bad {
   width: 12px;
   height: 12px;
   background: #db4437;
@@ -251,7 +214,7 @@
   margin-right: 8px;
 }
 
-#badSpeed {
+.modal_bad-speed {
   width: 12px;
   height: 12px;
   background: #db4437;
@@ -260,7 +223,7 @@
   margin-right: 8px;
 }
 
-#containerHeadlineResults {
+.modal_container-head-line-results {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -270,59 +233,59 @@
   margin-bottom: 22px;
 }
 
-#number {
+.modal_number {
   margin-right: 22px;
   font-size: 16px;
 }
 
-#headResTest {
+.modal_head-test {
   display: inline-block;
   width: 300px;
   margin-right: 12px;
 }
 
-#headResScope {
+.modal_head-scope {
   display: inline-block;
   width: 48px;
   margin-right: 12px;
 }
 
-#headResSpeed {
+.modal_head-speed {
   display: inline-block;
   width: 113px;
   margin-right: 12px;
 }
 
-#headResTotal {
+.modal_head-total {
   display: inline-block;
   width: 68px;
   margin-right: 12px;
 }
 
-#headResExpSpeed {
+.modal_head-exp-speed {
   display: inline-block;
   width: 119px;
   margin-right: 12px;
 }
 
-#headResConcept {
+.modal_head-concept {
   display: inline-block;
   width: 152px;
   margin-right: 12px;
 }
 
-#headResDate {
+.modal_head-date {
   display: inline-block;
   width: 112px;
   margin-right: 12px;
 }
 
-#list {
+.modal_list {
   margin: 0;
   padding-left: 16px;
 }
 
-#resultItemList {
+.modal_result-item {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -332,57 +295,57 @@
   margin-bottom: 16px;
 }
 
-#itemLabel {
+.modal_item-label {
   display: inline-block;
   width: 289px;
   margin-left: 23px;
   margin-right: 12px;
 }
 
-#itemScope {
+.modal_item-scope {
   display: inline-block;
   width: 48px;
   margin-right: 12px;
 }
 
-#itemSpeed {
+.modal_item-speed {
   display: inline-block;
   width: 113px;
   margin-right: 12px;
   color: #4285f4;
 }
 
-#noSpeed {
+.modal_no-speed {
   display: inline-block;
   width: 113px;
   margin-right: 12px;
 }
 
-#itemTotal {
+.modal_item-total {
   display: inline-block;
   width: 68px;
   margin-right: 12px;
 }
 
-#itemExpSpeed {
+.modal_item-exp-speed {
   display: inline-block;
   width: 119px;
   margin-right: 12px;
 }
 
-#itemConcept {
+.modal_item-concept {
   display: inline-block;
   width: 152px;
   margin-right: 12px;
 }
 
-#itemData {
+.modal_item-data {
   display: inline-block;
   width: 112px;
   margin-right: 28.5px;
 }
 
-#containerAverageTable {
+.modal_container-average-table {
   display: flex;
   align-items: center;
   font-family: 'Rubik';
@@ -393,7 +356,7 @@
   text-transform: uppercase;
 }
 
-#average {
+.modal_container-average-table_average {
   display: inline-block;
   width: 300px;
   margin-left: 34px;
@@ -401,14 +364,14 @@
   color: #777777;
 }
 
-#percentegare {
+.modal_container-average-table_percentegare {
   display: inline-block;
   width: 78px;
   margin-right: 12px;
   color: #4285f4;
 }
 
-#above {
+.modal_container-average-table_above {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
@@ -418,4 +381,20 @@
   color: #4285f4;
   width: 87px;
   display: inline-block;
+}
+
+.modal_identification_arrow-close-button {
+  position: absolute;
+  border: none;
+  margin-left: auto;
+  background-color: inherit;
+  top: 22px;
+  right: 15px;
+}
+
+.modal_identification_arrow-close {
+  fill: inherit;
+  transform: rotate(180deg);
+  padding: 5px 5px;
+  cursor: pointer;
 }

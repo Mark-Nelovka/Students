@@ -10,6 +10,7 @@ import {
   filterArr,
   searchStudent,
   idForModal,
+  arrArchive,
 } from './studentOperations';
 
 const initialState = {
@@ -20,6 +21,7 @@ const initialState = {
   studForPagination: null,
   filter: '',
   idForModal: 0,
+  arrForArchive: [],
 };
 
 const authSlice = createSlice({
@@ -63,12 +65,14 @@ const authSlice = createSlice({
       state.students = action.payload;
     },
     [searchStudent.fulfilled](state, action) {
-      console.log(action.payload);
       state.students = action.payload;
     },
     [idForModal](state, action) {
-      console.log(action.payload);
       state.idForModal = Number(action.payload);
+    },
+    [arrArchive](state, action) {
+      state.arrForArchive.push(action.payload);
+      // state.arrForArchive = [...state.arrForArchive, ...action.payload];
     },
   },
 });
