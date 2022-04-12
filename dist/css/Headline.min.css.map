@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,AAAC,CACH,IAAI,CAAE,IAAI,CACX",
+    "sources": [
+        "../../src/components/Headline/Headline.scss"
+    ],
+    "names": [],
+    "file": "Headline.min.css"
+}

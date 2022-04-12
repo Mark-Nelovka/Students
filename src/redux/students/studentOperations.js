@@ -81,6 +81,8 @@ const filter = createAction('students/filter');
 
 const filterArr = createAction('students/filterArr');
 
+const idForModal = createAction('student/modal');
+
 export {
   fetchStudent,
   check,
@@ -91,4 +93,5 @@ export {
   filter,
   filterArr,
   searchStudent,
+  idForModal,
 };

@@ -1,36 +1,22 @@
-// import axios from 'axios';
-// import { v4 as uuidv4 } from 'uuid';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import s from './Students.module.css';
 import { ReactComponent as FilterName } from '../images/filter-name.svg';
 import { ReactComponent as ArrowNumber } from '../images/arrows-number.svg';
 import { ReactComponent as Info } from '../images/info.svg';
-// import { ReactComponent as Check } from '../images/Check.svg';
+import { ReactComponent as ArrowDown } from '../images/arrow-down.svg';
 import {
   fetchStudent,
   countArchiveStudents,
-  // filterArr,
+  idForModal,
 } from '../../redux/students/studentOperations';
+import ModalInfoStudent from 'components/Modal/Moda';
 
 function Students() {
   const dispatch = useDispatch();
   const students = useSelector(state => state.students.students);
   let count = useSelector(state => state.students.archive);
-  // const filterSt = useSelector(state => state.students.filter);
-
-  // useEffect(() => {
-  //   if (students) {
-  //     console.log(students);
-  //     students.filter(studentF => {
-  //       if (studentF.id == filterSt) {
-  //         return dispatch(filterArr([studentF]));
-  //       }
-  //       return studentF;
-  //     });
-  //     return;
-  //   }
-  // }, [filterSt]);
+  const idModal = useSelector(state => state.students.idForModal);
 
   const studentChecked = e => {
     const { checked } = e.target;
@@ -46,29 +32,19 @@ function Students() {
       return;
     }
   };
+
+  const moreInfo = e => {
+    const { id } = e.target;
+    dispatch(idForModal(id));
+    console.log(idModal);
+  };
+
   useEffect(() => {
     if (students === null) {
       dispatch(fetchStudent());
       return;
     }
     return;
-    // if (students === null) {
-    //   return;
-    // }
-    // setChangeStudent(
-    //   students.map(st => {
-    //     return {
-    //       class: st.class,
-    //       id: st.id,
-    //       name: st.name,
-    //       score: st.score,
-    //       speed: st.speed,
-    //       parents: st.parents,
-    //       tests: st.tests,
-    //       checkedd: false,
-    //     };
-    //   })
-    // );
   });
   return (
     <section className={s.sectionStudents}>
@@ -95,12 +71,15 @@ function Students() {
 
         <span className={s.studentParentName}>Parents</span>
       </div>
+
       <ul className={s.studentsList}>
         {students &&
           students.map(student => {
+            if (student.id == idModal) {
+              return <ModalInfoStudent props={idModal} />;
+            }
             return (
               <li key={student.id} className={s.studentItem}>
-                {/* <Check className={s.check} width="12" height="12" /> */}
                 <input
                   className={s.checkbox}
                   type="checkbox"
@@ -121,6 +100,19 @@ function Students() {
                     {student.parents.join(', ')}
                   </span>
                 </div>
+                <button
+                  onClick={moreInfo}
+                  type="button"
+                  className={s.buttonArrowDown}
+                  id={student.id}
+                >
+                  <ArrowDown
+                    className={s.arrowDownIcon}
+                    width="10"
+                    height="5"
+                    id={student.id}
+                  />
+                </button>
               </li>
             );
           })}

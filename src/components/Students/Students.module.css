@@ -65,6 +65,7 @@
 }
 
 .studentItem {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 14px 26px 14px 23px;
@@ -173,7 +174,6 @@
   color: var(--text-color);
   display: inline-block;
   width: 250px;
-  margin-right: 111px;
   display: flex;
   align-items: center;
 }
@@ -213,4 +213,18 @@
 .check {
   fill: #323232;
   background-color: inherit;
+}
+
+.arrowDownIcon {
+  fill: inherit;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.buttonArrowDown {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: inherit;
+  margin-left: 174px;
 }

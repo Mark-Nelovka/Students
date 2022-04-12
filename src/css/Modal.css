@@ -1,0 +1,453 @@
+#containerModal {
+  position: absolute;
+  height: auto;
+  padding: 20px 198px 24px 60px;
+  background: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 1px 4px rgba(60, 52, 135, 0.15);
+          box-shadow: 0px 1px 4px rgba(60, 52, 135, 0.15);
+  z-index: 5;
+}
+
+#identification {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #777777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 12px;
+}
+
+#identification > b {
+  color: #5b5b5b;
+}
+
+#studentName {
+  margin-right: 15px;
+}
+
+#containerButtonFilter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 12px;
+}
+
+#buttonFilter {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #5b5b5b;
+  background: #ffffff;
+  border: 1px solid #c0c0c0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 6px 18px 6px 12px;
+  margin-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#arrow {
+  fill: inherit;
+  margin-left: 10px;
+}
+
+#dataFilter {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #c0c0c0;
+  background-color: inherit;
+  padding: 0 0 7px 0;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #c0c0c0;
+  width: 199px;
+}
+
+#containerDate {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#date {
+  fill: inherit;
+  margin-left: 14px;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+
+#line {
+  width: 1102px;
+  height: 1px;
+  background-color: #a6192e;
+  margin-bottom: 12px;
+}
+
+#containerScore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#containerSpeed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 12px;
+}
+
+#score {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #777777;
+}
+
+#speed {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #777777;
+}
+
+#idealText {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #4285f4;
+}
+
+#idealTextSpeed {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #4285f4;
+}
+
+#goodText {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #0f9d58;
+}
+
+#goodTextSpeed {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #0f9d58;
+}
+
+#normText {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #e2b534;
+}
+
+#badText {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #db4437;
+}
+
+#badTextSpeed {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #db4437;
+}
+
+#ideal {
+  width: 12px;
+  height: 12px;
+  background: #4285f4;
+  border-radius: 40px;
+  margin-left: 24px;
+  margin-right: 8px;
+}
+
+#idealSpeed {
+  width: 12px;
+  height: 12px;
+  background: #4285f4;
+  border-radius: 40px;
+  margin-left: 24px;
+  margin-right: 8px;
+}
+
+#good {
+  width: 12px;
+  height: 12px;
+  background: #0f9d58;
+  border-radius: 40px;
+  margin-left: 24px;
+  margin-right: 8px;
+}
+
+#goodSpeed {
+  width: 12px;
+  height: 12px;
+  background: #0f9d58;
+  border-radius: 40px;
+  margin-left: 24px;
+  margin-right: 8px;
+}
+
+#norm {
+  width: 12px;
+  height: 12px;
+  background: #e2b534;
+  border-radius: 40px;
+  margin-left: 24px;
+  margin-right: 8px;
+}
+
+#bad {
+  width: 12px;
+  height: 12px;
+  background: #db4437;
+  border-radius: 40px;
+  margin-left: 24px;
+  margin-right: 8px;
+}
+
+#badSpeed {
+  width: 12px;
+  height: 12px;
+  background: #db4437;
+  border-radius: 40px;
+  margin-left: 24px;
+  margin-right: 8px;
+}
+
+#containerHeadlineResults {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #777777;
+  margin-bottom: 22px;
+}
+
+#number {
+  margin-right: 22px;
+  font-size: 16px;
+}
+
+#headResTest {
+  display: inline-block;
+  width: 300px;
+  margin-right: 12px;
+}
+
+#headResScope {
+  display: inline-block;
+  width: 48px;
+  margin-right: 12px;
+}
+
+#headResSpeed {
+  display: inline-block;
+  width: 113px;
+  margin-right: 12px;
+}
+
+#headResTotal {
+  display: inline-block;
+  width: 68px;
+  margin-right: 12px;
+}
+
+#headResExpSpeed {
+  display: inline-block;
+  width: 119px;
+  margin-right: 12px;
+}
+
+#headResConcept {
+  display: inline-block;
+  width: 152px;
+  margin-right: 12px;
+}
+
+#headResDate {
+  display: inline-block;
+  width: 112px;
+  margin-right: 12px;
+}
+
+#list {
+  margin: 0;
+  padding-left: 16px;
+}
+
+#resultItemList {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #777777;
+  margin-bottom: 16px;
+}
+
+#itemLabel {
+  display: inline-block;
+  width: 289px;
+  margin-left: 23px;
+  margin-right: 12px;
+}
+
+#itemScope {
+  display: inline-block;
+  width: 48px;
+  margin-right: 12px;
+}
+
+#itemSpeed {
+  display: inline-block;
+  width: 113px;
+  margin-right: 12px;
+  color: #4285f4;
+}
+
+#noSpeed {
+  display: inline-block;
+  width: 113px;
+  margin-right: 12px;
+}
+
+#itemTotal {
+  display: inline-block;
+  width: 68px;
+  margin-right: 12px;
+}
+
+#itemExpSpeed {
+  display: inline-block;
+  width: 119px;
+  margin-right: 12px;
+}
+
+#itemConcept {
+  display: inline-block;
+  width: 152px;
+  margin-right: 12px;
+}
+
+#itemData {
+  display: inline-block;
+  width: 112px;
+  margin-right: 28.5px;
+}
+
+#containerAverageTable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+#average {
+  display: inline-block;
+  width: 300px;
+  margin-left: 34px;
+  margin-right: 12px;
+  color: #777777;
+}
+
+#percentegare {
+  display: inline-block;
+  width: 78px;
+  margin-right: 12px;
+  color: #4285f4;
+}
+
+#above {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #4285f4;
+  width: 87px;
+  display: inline-block;
+}
+/*# sourceMappingURL=Modal.css.map */

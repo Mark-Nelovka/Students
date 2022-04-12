@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACH,IAAI,EAAE,IAAI;CACX",
+    "sources": [
+        "../components/Headline/Headline.scss"
+    ],
+    "names": [],
+    "file": "Headline.css"
+}
